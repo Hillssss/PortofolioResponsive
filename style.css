@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: black ;
+    background-size: cover;
+    background-position: center;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+a:hover {
+    color: orangered;
+}
+/*HEADER*/
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+span{
+    color: orangered;
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    background-color: orangered;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20PX;
+    font-size: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: whitesmoke;
+}
+.action_btn:active {
+    scale: 0.95;
+}
+/*Dropdown Menu*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 02s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}   
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+    background-image: image-set("light.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+.content h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.content h1{
+    font-size: 2rem;
+    margin: 1rem;
+}
+.content a{
+    background-color: whitesmoke;
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20PX;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.about {
+        width: 100%;
+        height: 100vh;
+        padding: 100px 0;
+        background-image: image-set('hdiri.jpg');
+        background-size: contain;
+        background-position: center;
+}
+.about-text{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.about-text h2{
+    font-size: 4rem;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+.about-text h5{
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: whitesmoke;
+}
+.about-text p{
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    color: whitesmoke;
+}
+.about-text a{
+    background-color: whitesmoke;
+    color: orangered;
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20PX;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.service {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    
+}
+.title h2{
+    color: whitesmoke;
+    font-size: 75px;
+    width: 100%;
+    margin-bottom: 10px auto;
+    text-align: center;
+}
+.title a{
+    color: orangered;
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 10px auto;
+    text-align: left;
+}
+    .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.card {
+    height: 60vh;
+    width: 350px;
+    padding: 15px 30px;
+    background: black;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 3px solid whitesmoke;
+}
+.card i {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: whitesmoke;
+}
+.card h5 {
+    color: orangered;
+    height: auto;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.fe p {
+    color: whitesmoke;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+.be p {
+    color: whitesmoke;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+.wd p {
+    color: whitesmoke;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+.wd a {
+    color: orangered;
+    font-size: 12px;
+    text-align: center;
+}
+.skill {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    
+}
+
+.boxx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.cardd {
+    height: 60vh;
+    width: 350px;
+    padding: 15px 30px;
+    background: black;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 3px solid whitesmoke;
+}
+.cardd i {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: orangered;
+}
+.cardd h5 {
+    color: whitesmoke;
+    height: auto;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: orangered;
+    font-weight: 400;
+}
+.skill-bar p {
+    text-align: left;
+}
+.skill-box {
+    text-align: right;
+    width: 100%;
+    background-color: orangered;
+}
+.html {
+    width: 90%;
+    background-color: white;
+}
+.css {
+    width: 80%;
+    background-color: white;
+}
+.javascript {
+    width: 70%;
+    background-color: white;
+}
+.java {
+    width: 90%;
+    background-color: white;
+}
+.php {
+    width: 80%;
+    background-color: white;
+}
+.api {
+    width: 75%;
+    background-color: white;
+}
+.quarkus {
+    width: 65%;
+    background-color: white;
+}
+.figma {
+    width: 65%;
+    background-color: white;
+}
+.sketch {
+    width: 70%;
+    background-color: white;
+}
+.ps {
+    width: 50%;
+    background-color: white;
+}
+.contact-me {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    background-image: image-set("light.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.contact-text h2{
+    color: whitesmoke;
+    font-size: 75px;
+    width: 100%;
+    margin-bottom: 10px auto;
+    text-align: center;
+}
+.contact-box{
+    color: orangered;
+}
+.contact {
+    width: 25%;
+    padding: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    
+}
+.contact h4 {
+    color: whitesmoke;
+    font-size: 11px;
+    padding-bottom: 9px;
+}
+.contact p {
+    font-size: 11px;
+    font-weight: 700;
+}
+.sosial {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    text-align: center;
+    
+}
+.sosial h2{
+    color: whitesmoke;
+    font-size: 75px;
+    width: 100%;
+    margin-bottom: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.sosial p{
+    font-weight: bold;
+    padding-bottom: 50px;
+    color: whitesmoke;
+}
+.sosial-logo {
+    display: grid;
+    padding-bottom: 20px;
+}
+.sosial-logo a{
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20PX;
+    font-size: 10rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    size: 75px;
+}
+
+.end {
+    position: absolute;
+    color: white;
+    bottom: 65px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+ 
+/*Responsive design*/
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+    
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+    .service .box,
+    .skill .boxx {
+        display: grid;
+    }
+
+}
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+   
+    
+
