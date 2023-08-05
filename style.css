@@ -69,6 +69,7 @@ span{
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
+    
 }
 
 .action_btn:hover {
@@ -125,13 +126,20 @@ span{
 .content h4 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .content h1{
     font-size: 2rem;
     margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+}
+.content p{
+    background-color: rgba(255, 69, 0);
+    font-weight: bold;
 }
 .content a{
-    background-color: whitesmoke;
+    background-color: white;
     padding: 1rem 1rem;
     border: none;
     outline: none;
@@ -140,6 +148,7 @@ span{
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
+    border: 2px solid orangered;
 }
 .about {
         width: 100%;
@@ -374,9 +383,11 @@ span{
     width: 100%;
     margin-bottom: 10px auto;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .contact-box{
     color: orangered;
+    
 }
 .contact {
     width: 25%;
@@ -384,16 +395,19 @@ span{
     box-sizing: border-box;
     text-align: center;
     float: left;
+    background-color: rgba(255, 255, 255, 0.1);
     
 }
 .contact h4 {
     color: whitesmoke;
     font-size: 11px;
     padding-bottom: 9px;
+    background-color: 
 }
 .contact p {
     font-size: 11px;
     font-weight: 700;
+    
 }
 .sosial {
     width: 100%;
